@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import useEmblaCarousel from 'embla-carousel-react';
@@ -25,6 +24,41 @@ const Gallery = () => {
       src: "/lovable-uploads/5b0657df-977c-4771-9a81-ee7ddb55951c.png",
       alt: "Lip filler treatment result",
       category: "Estética Facial"
+    },
+    {
+      src: "/lovable-uploads/5c6bef38-de22-49fd-9179-f4c2edad6558.png",
+      alt: "Professional aesthetic treatment preparation",
+      category: "Estética Facial"
+    },
+    {
+      src: "/lovable-uploads/f065e584-c967-4113-8af1-7e63d0ea7086.png",
+      alt: "Facial treatment session",
+      category: "Estética Facial"
+    },
+    {
+      src: "/lovable-uploads/35049dd2-23ba-423e-878d-300e08e9a9d7.png",
+      alt: "Beauty clinic professional environment",
+      category: "Clínica"
+    },
+    {
+      src: "/lovable-uploads/19b12df7-61f1-42fc-8601-27b528417424.png",
+      alt: "Gold facial mask treatment",
+      category: "Tratamento Premium"
+    },
+    {
+      src: "/lovable-uploads/17fba9ce-6af0-40d4-ad93-5a44c2b6fbb4.png",
+      alt: "Madam Martins Beauty Clinic gift bag",
+      category: "Produtos"
+    },
+    {
+      src: "/lovable-uploads/0848d81a-de96-4e51-84ed-ea2d15ec91a8.png",
+      alt: "Purple nail art design",
+      category: "Nail Art"
+    },
+    {
+      src: "/lovable-uploads/b60812a5-cf88-4163-8ff6-fca0e95657ac.png",
+      alt: "Blue nail design with elegant finish",
+      category: "Nail Design"
     }
   ];
 

@@ -1,4 +1,3 @@
-
 import { Sparkles, Palette, Zap } from 'lucide-react';
 
 const Services = () => {
