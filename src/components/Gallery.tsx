@@ -27,10 +27,10 @@ const Gallery = () => {
     <section className="py-20 bg-stone-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-stone-800 mb-6">
+          <h2 className="font-poppins text-4xl md:text-5xl font-bold text-stone-800 mb-6">
             Galeria de Trabalhos
           </h2>
-          <p className="font-inter text-xl text-stone-600 max-w-2xl mx-auto">
+          <p className="font-poppins text-xl text-stone-600 max-w-2xl mx-auto">
             Conheça alguns dos nossos trabalhos mais recentes e se inspire
           </p>
         </div>
@@ -48,7 +48,7 @@ const Gallery = () => {
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center">
                 <div className="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="font-inter font-semibold">{image.category}</p>
+                  <p className="font-poppins font-semibold">{image.category}</p>
                 </div>
               </div>
             </div>
