@@ -3,10 +3,10 @@ import { Instagram, MapPin } from 'lucide-react';
 
 const Header = () => {
   return (
-    <header className="relative min-h-screen bg-gradient-to-br from-stone-50 via-amber-50 to-stone-100 overflow-hidden">
+    <header className="relative min-h-screen bg-gradient-to-br from-gold-50 via-gold-100 to-amber-50 overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gold-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-stone-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-300 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-float" style={{ animationDelay: '2s' }}></div>
       
       <div className="relative z-10 container mx-auto px-6 py-16 flex flex-col justify-center min-h-screen">
         <div className="text-center max-w-4xl mx-auto">
@@ -20,9 +20,9 @@ const Header = () => {
           </div>
 
           {/* Main heading */}
-          <h1 className="font-poppins text-5xl md:text-7xl font-bold text-stone-800 mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="font-poppins text-5xl md:text-7xl font-light text-stone-800 mb-6 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <span className="block">MADAM MARTINS</span>
-            <span className="block text-gold-600 text-3xl md:text-4xl font-medium mt-2">BEAUTY CLINIC</span>
+            <span className="block text-gold-600 text-3xl md:text-4xl font-normal mt-2">BEAUTY CLINIC</span>
           </h1>
 
           {/* Tagline */}

@@ -30,13 +30,13 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-br from-gold-50 to-gold-100">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-stone-800 mb-6">
+          <h2 className="font-poppins text-4xl md:text-5xl font-light text-stone-800 mb-6">
             Nossos Serviços
           </h2>
-          <p className="font-inter text-xl text-stone-600 max-w-2xl mx-auto">
+          <p className="font-poppins text-xl text-stone-600 max-w-2xl mx-auto">
             Oferecemos uma gama completa de serviços de beleza com a mais alta qualidade e profissionalismo
           </p>
         </div>
@@ -45,7 +45,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className="group bg-stone-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gold-200"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative h-64 overflow-hidden">
@@ -54,7 +54,7 @@ const Services = () => {
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-gold-900/50 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
                   <div className="bg-gold-600 p-3 rounded-full mb-3">
                     {service.icon}
@@ -63,15 +63,15 @@ const Services = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="font-playfair text-2xl font-semibold text-stone-800 mb-3">
+                <h3 className="font-poppins text-2xl font-normal text-stone-800 mb-3">
                   {service.title}
                 </h3>
-                <p className="font-inter text-stone-600 mb-4">
+                <p className="font-poppins text-stone-600 mb-4">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="font-inter text-sm text-stone-500 flex items-center">
+                    <li key={idx} className="font-poppins text-sm text-stone-500 flex items-center">
                       <div className="w-2 h-2 bg-gold-600 rounded-full mr-3"></div>
                       {feature}
                     </li>
