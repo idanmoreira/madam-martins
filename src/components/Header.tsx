@@ -1,3 +1,4 @@
+
 import { Instagram, MapPin } from 'lucide-react';
 import Navigation from './Navigation';
 const Header = () => {
@@ -14,7 +15,7 @@ const Header = () => {
           <div className="text-center max-w-4xl mx-auto">
             {/* Logo */}
             <div className="mb-8 animate-fade-in-up">
-              <img src="/lovable-uploads/c7db0972-b69c-4b5c-892a-e83aae2900b3.png" alt="Madam Martins Beauty Clinic Logo" className="w-48 h-48 mx-auto mb-6 object-contain" />
+              <img src="/lovable-uploads/6cb102a7-aad6-4f4b-a306-606a00235ffe.png" alt="Madam Martins Beauty Clinic Logo" className="w-48 h-48 mx-auto mb-6 object-contain" />
             </div>
 
             {/* Main heading */}

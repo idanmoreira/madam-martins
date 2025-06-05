@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 const Navigation = () => {
@@ -24,7 +25,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/lovable-uploads/c7db0972-b69c-4b5c-892a-e83aae2900b3.png" alt="Madam Martins Beauty Clinic" className="w-10 h-10 object-contain" />
+            <img src="/lovable-uploads/6cb102a7-aad6-4f4b-a306-606a00235ffe.png" alt="Madam Martins Beauty Clinic" className="w-10 h-10 object-contain" />
             <span className="ml-2 font-poppins font-semibold text-stone-800"></span>
           </div>
 
