@@ -1,16 +1,20 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -20,7 +24,13 @@ const Navigation = () => {
     }
     setIsMobileMenuOpen(false);
   };
-  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'}`}>
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-white/20 backdrop-blur-md border-b border-white/20 shadow-lg' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -55,26 +65,30 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && <div className="md:hidden bg-white/95 backdrop-blur-sm border-t border-gold-200">
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-white/20 backdrop-blur-md border-t border-white/20">
             <div className="py-4 space-y-2">
-              <button onClick={() => scrollToSection('home')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-gold-50 transition-colors">
+              <button onClick={() => scrollToSection('home')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-white/10 transition-colors">
                 Início
               </button>
-              <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-gold-50 transition-colors">
+              <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-white/10 transition-colors">
                 Serviços
               </button>
-              <button onClick={() => scrollToSection('gallery')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-gold-50 transition-colors">
+              <button onClick={() => scrollToSection('gallery')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-white/10 transition-colors">
                 Galeria
               </button>
-              <button onClick={() => scrollToSection('instagram')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-gold-50 transition-colors">
+              <button onClick={() => scrollToSection('instagram')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-white/10 transition-colors">
                 Instagram
               </button>
-              <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-gold-50 transition-colors">
+              <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-4 py-2 font-poppins text-stone-700 hover:text-gold-600 hover:bg-white/10 transition-colors">
                 Contato
               </button>
             </div>
-          </div>}
+          </div>
+        )}
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navigation;
