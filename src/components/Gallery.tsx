@@ -1,5 +1,8 @@
 
+import { useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Gallery = () => {
   const galleryImages = [
@@ -26,9 +29,9 @@ const Gallery = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-amber-50 to-gold-100">
+    <section id="gallery" className="py-24 bg-gradient-to-br from-amber-50 to-gold-100">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="font-poppins text-4xl md:text-5xl font-light text-stone-800 mb-6">
             Galeria de Trabalhos
           </h2>
@@ -37,13 +40,24 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Carousel className="w-full">
+        <div className="max-w-6xl mx-auto">
+          <Carousel 
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+              }),
+            ]}
+          >
             <CarouselContent>
               {galleryImages.map((image, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <div className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer bg-white/80 backdrop-blur-sm border border-gold-200 shadow-lg">
+                  <div className="p-3">
+                    <div className="group relative overflow-hidden rounded-lg aspect-square cursor-pointer bg-white/80 backdrop-blur-sm border border-gold-200 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
                       <img 
                         src={image.src}
                         alt={image.alt}
@@ -51,7 +65,7 @@ const Gallery = () => {
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-gold-900/50 transition-all duration-300 flex items-center justify-center">
                         <div className="text-white text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <p className="font-poppins font-normal">{image.category}</p>
+                          <p className="font-poppins font-normal text-lg">{image.category}</p>
                         </div>
                       </div>
                     </div>
@@ -59,8 +73,8 @@ const Gallery = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="bg-gold-600 hover:bg-gold-700 text-white border-gold-600" />
-            <CarouselNext className="bg-gold-600 hover:bg-gold-700 text-white border-gold-600" />
+            <CarouselPrevious className="bg-gold-600 hover:bg-gold-700 text-white border-gold-600 -left-6" />
+            <CarouselNext className="bg-gold-600 hover:bg-gold-700 text-white border-gold-600 -right-6" />
           </Carousel>
         </div>
       </div>

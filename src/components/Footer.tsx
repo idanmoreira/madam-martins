@@ -1,6 +1,8 @@
 import { MapPin, Phone, Mail, Instagram, Clock } from 'lucide-react';
+
 const Footer = () => {
-  return <footer className="bg-gradient-to-br from-stone-800 to-stone-900 text-white py-20">
+  return (
+    <footer id="contact" className="bg-gradient-to-br from-stone-800 to-stone-900 text-white py-20">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Contact Info */}
@@ -51,8 +53,7 @@ const Footer = () => {
               <Instagram className="w-6 h-6 mr-3 text-gold-400" />
               <div>
                 <p className="font-poppins font-normal">@madammartinsbeautyclinic</p>
-                <p className="font-poppins text-stone-400 text-sm">
-              </p>
+                <p className="font-poppins text-stone-400 text-sm"></p>
               </div>
             </div>
             <p className="font-poppins text-stone-300 text-sm leading-relaxed">
@@ -66,6 +67,8 @@ const Footer = () => {
           <p className="font-poppins text-stone-400">© 2025 Madam Martins Beauty Clinic. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

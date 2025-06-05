@@ -24,13 +24,13 @@ const Services = () => {
       title: "Depilação",
       description: "Técnicas modernas de depilação para pele lisa e sedosa",
       icon: <Zap className="w-8 h-8" />,
-      image: "/lovable-uploads/455cf295-994b-417d-9a74-3e85ec54c8db.png",
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&h=300&fit=crop&crop=center",
       features: ["Técnicas Avançadas", "Produtos Premium", "Conforto Garantido"]
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gold-50 to-gold-100">
+    <section id="services" className="py-20 bg-gradient-to-br from-gold-50 to-gold-100">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-poppins text-4xl md:text-5xl font-light text-stone-800 mb-6">
@@ -45,7 +45,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={service.id}
-              className="group bg-white/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gold-200"
+              className="group bg-white/80 backdrop-blur-sm rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gold-200"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative h-64 overflow-hidden">
@@ -56,7 +56,7 @@ const Services = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gold-900/50 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <div className="bg-gold-600 p-3 rounded-full mb-3">
+                  <div className="bg-gold-600 p-3 rounded-lg mb-3">
                     {service.icon}
                   </div>
                 </div>
