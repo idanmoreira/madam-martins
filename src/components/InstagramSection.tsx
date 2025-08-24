@@ -43,7 +43,7 @@ const InstagramSection = () => {
                   Pam Martins e Carol Martins, fundadoras da Madam Martins Beauty Clinic, 
                   trazem anos de experiência e paixão pela beleza.
                 </p>
-                <a href="https://www.instagram.com/p/DAn0phDNpWa/" target="_blank" rel="noopener noreferrer" className="font-poppins text-gold-600 hover:text-gold-700 font-normal inline-flex items-center">
+                <a href="https://www.instagram.com/madammartinsbeautyclinic/" target="_blank" rel="noopener noreferrer" className="font-poppins text-gold-600 hover:text-gold-700 font-normal inline-flex items-center">
                   Ver no Instagram
                   <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
